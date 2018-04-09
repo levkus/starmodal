@@ -5,73 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Modal Demo</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    .starmodal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-y: auto;
-      padding: 40px;
-    }
-
-    .starmodal-body {
-      margin: auto;
-      position: relative;
-      background: #fff;
-      padding: 40px;
-    }
-
-    .starmodal-content {
-      height: 900px;
-      width: 400px;
-    }
-
-    .starmodal-close-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .starmodal-overlay-out {
-      opacity: 0;
-      transition: 0.2s;
-    }
-
-    .starmodal-overlay-in {
-      opacity: 1;
-      transition: 0.5s;
-    }
-
-    .starmodal-modal-out {
-      transform: translateY(-100px);
-      transition: 0.2s;
-    }
-
-    .starmodal-modal-in {
-      transform: translateY(0);
-      transition: 0.5s;
-    }
-  </style>
+  <link rel="stylesheet" href="starmodal.css">
 </head>
 <body>
   <button id="test-button">Show modal</button>
   <div class="hidden">
     <div id="test-content" class="modal-content">AYEEEEEEEE!</div>
   </div>
-  <script src="modal.js"></script>
+  <script src="starmodal.js"></script>
   <script>
     const content = document.getElementById('test-content')
     const button = document.getElementById('test-button')
@@ -79,7 +20,6 @@
     const modal = new StarModal()
     modal.init({
       closeButton: {
-        text: 'Закрыть',
         parent: 'modal',
       },
     })
