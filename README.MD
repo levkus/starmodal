@@ -2,6 +2,7 @@
 A simple Modal ES6 module with no dependencies.
 
 ## Setup
+### In your HTML:
 ````html
 <div style="display: none">
   <div id="some-content">
@@ -10,6 +11,7 @@ A simple Modal ES6 module with no dependencies.
 </div>
 ````
 
+### In your JavaScript:
 ````javascript
 import StarModal from './starmodal'
 

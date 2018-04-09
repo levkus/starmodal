@@ -38,11 +38,8 @@ export default class StarModal {
       innerHTML
     } = closeButton
 
-    if (!innerHTML) {
-      this.closeButton.innerText = text
-    } else {
-      this.closeButton.innerHTML = innerHTML
-    }
+    this.closeButton.innerHTML = innerHTML || text
+
     if (parent === 'overlay') {
       this.overlay.appendChild(this.closeButton)
     } else if (parent === 'modal') {
